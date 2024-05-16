@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>工作经历</title>
+    <link rel="stylesheet" type="text/css" href="body.css" />
+    <style></style>
+  </head>
+
+  <body
+    oncontextmenu="alert('检测到非法调试，右键被管理员禁用');
+    return false"
+    onselectstart="return false"
+  >
+    <!-- 检测并禁用控制台 -->
+    <script>
+      // 获取当前时间戳的函数
+      const getTime = () => Date.now();
+
+      // 自定义的查询选择器函数，返回匹配的第一个DOM元素
+      const $ = (name) => document.querySelector(name);
+
+      // 获取页面上的<p>元素并存储在$p变量中
+      const $p = $("p");
+
+      // 获取页面上的<h1>元素并存储在$h1变量中
+      const $h1 = $("h1");
+
+      // 创建一个包含100个undefined的数组
+      const arr = new Array(100);
+
+      // 创建一个二维数组bigArr，每个子数组包含1000个0
+      const bigArr = Array.from(arr, (i) => {
+        return Array.from(new Array(1000), (i) => 0);
+      });
+
+      // 存储console.table函数的引用
+      const consoleTable = console.table;
+
+      // 存储console.clear函数的引用
+      const consoleClear = console.clear;
+
+      // 存储console.log函数的引用
+      const consoleLog = console.log;
+
+      // 定义execute函数，用于测量在控制台显示bigArr所需的时间
+      const execute = () => {
+        // 记录开始时间
+        const start = getTime();
+
+        // 在控制台显示bigArr数组的内容（以表格形式）
+        consoleTable(bigArr);
+
+        // 清除控制台的内容
+        consoleClear();
+
+        // 记录结束时间
+        const end = getTime();
+
+        // 计算并返回执行时间（毫秒）
+        const res = end - start;
+
+        // 打印执行时间到控制台
+        consoleLog(res);
+
+        // 返回执行时间
+        return res;
+      };
+
+      // 每隔100毫秒执行一次execute函数
+      setInterval(() => {
+        // 执行execute函数并获取执行时间
+        const time = execute();
+
+        // 将执行时间设置为<h1>元素的文本内容
+        $h1.innerText = time.toFixed(2); // 显示两位小数的执行时间
+
+        // 如果执行时间大于10毫秒，则<p>元素的文本内容设置为"开启控制台"
+        if (time > 10) {
+          $p.innerText = "开启控制台";
+        } else {
+          // 否则，<p>元素的文本内容设置为"没有开启控制台"
+          $p.innerText = "没有开启控制台";
+        }
+      }, 100); // 每隔100毫秒执行一次
+    </script>
+    <!-- 添加水印文本的容器 -->
+    <div class="watermark"></div>
+
+    <!-- 页面内容 -->
+    <div
+      style="
+        position: relative;
+        z-index: 1;
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 40px;
+      "
+    >
+      <h1>信宜市高尚电脑3号摊</h1>
+    </div>
+    <article
+      style="
+        max-width: 760px;
+        margin: 30px auto;
+        padding: 15px;
+        color: rgb(36, 41, 46);
+        font-size: 17px;
+        line-height: 1.7;
+        text-size-adjust: 100%;
+      "
+    >
+      <p>时间：2020.9~2022.1</p>
+      <p>职位：电脑组装与维修助理</p>
+      <p>工作内容：</p>
+      <p>
+        1.
+        负责登记记录客户遇到的电脑故障等问题以及简单检测电脑故障、系统故障原因及处理故障。
+      </p>
+      <p>2. 电脑主机和笔记本拆装以及电脑系统安装</p>
+      <p>3. 检测简单家庭网络故障原因及处理故障。</p>
+    </article>
+    <footer
+      style="
+        margin-top: 60px;
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 40px;
+        font-size: 15px;
+      "
+    >
+      <p style="color: #666;">Copyright ©</p>
+      <!--版权-->
+      <a
+        style="color: #666;"
+        href="备案号查询网址"
+        target="_blank"
+        rel="noopener noreferrer"
+        >备案号</a
+      >
+      <p></p>
+      <!--备案号-->
+      <a
+        style="color: #666;"
+        href="备案号查询网址"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><img
+          src="https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png"
+          alt="anbei"
+          style="width: 15px; height: 15px;"
+        />备案号</a
+      >
+      <!--备案号-->
+    </footer>
+  </body>
+</html>
