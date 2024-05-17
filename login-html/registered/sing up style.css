@@ -132,3 +132,11 @@ section .color:nth-child(3) {
   width: 60px;
   height: 60px;
 }
+
+@media screen and (max-width: 600px) {
+    /* 在屏幕宽度小于或等于600px时应用的样式 */
+    body {
+        font-size: 18px;
+    }
+    /* 其他样式规则 */
+}
