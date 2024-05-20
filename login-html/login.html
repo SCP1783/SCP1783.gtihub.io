@@ -2,12 +2,12 @@
 <html>
 
 <head>
-  <title>8_常用注册页面的表单实例（含验证）.html</title>
+  <title>注册页面</title>
 
   <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
   <meta http-equiv="description" content="this is my page">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
 
   <style type="text/css">
@@ -21,6 +21,40 @@
       background-size: cover;
       /* 设置背景颜色，背景图加载过程中会显示背景色 */
       background-color: #CCCCCC;
+    }
+
+    /* 响应式布局 */
+    @media screen and (max-width: 768px) {
+      #user_reg {
+        font-size: 24px;
+        /* 在小屏幕上减小字体大小 */
+        margin-top: 100px;
+        /* 调整顶部间距以适应小屏幕 */
+      }
+
+      form {
+        width: 90%;
+        /* 宽度调整为百分比以适应不同屏幕尺寸 */
+        margin: 20px auto;
+        /* 调整外边距 */
+        font-size: 18px;
+        /* 减小字体大小 */
+      }
+
+      input {
+        height: 40px;
+        /* 增大输入框高度以适应触摸操作 */
+        padding: 5px;
+        /* 添加内边距以提高可读性 */
+      }
+
+      input[type="submit"],
+      input[type="reset"] {
+        height: 40px;
+        /* 增大按钮高度 */
+        padding: 5px 10px;
+        /* 添加内边距以提高可读性 */
+      }
     }
 
     #user_reg {
