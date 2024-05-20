@@ -134,4 +134,24 @@ section .color:nth-child(3) {
 }
 
 
+/*footer*/
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 40px;
+  font-size: 15px;
+}
 
+footer p a {
+  color: #666;
+  text-decoration: none; /* 移除链接下划线 */
+}
+
+footer p a:hover {
+  color: #333; /* 鼠标悬停时的颜色 */
+  text-decoration: underline; /* 鼠标悬停时添加下划线 */
+}
