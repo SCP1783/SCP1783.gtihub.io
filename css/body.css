@@ -133,7 +133,7 @@ section .color:nth-child(3) {
   height: 60px;
 }
 
-/
+
 
 /*watermark水印*/
 .watermark-container {
@@ -170,7 +170,7 @@ section .color:nth-child(3) {
 }
 
 
-*footer*/
+/*footer*/
 footer {
   position: fixed;
   bottom: 0;
