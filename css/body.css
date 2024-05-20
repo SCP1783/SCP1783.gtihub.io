@@ -133,4 +133,35 @@ section .color:nth-child(3) {
   height: 60px;
 }
 
+.watermark-container {
+  position: relative; /* 使伪元素能够相对于此容器定位 */
+  width: 100%; /* 容器宽度占满全屏 */
+  min-height: 100vh; /* 容器最小高度等于视口高度 */
+  overflow: auto; /* 允许内容滚动 */
+}
 
+.watermark-container:before {
+  content: "网站内容仅供展示，请勿盗用！！"; /* 替换为你想要的水印文本 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%; /* 水印宽度占满全屏 */
+  height: 100%; /* 水印高度占满全屏 */
+  transform: translate(-50%, -50%) rotate(-25deg); /* 定位到中心并旋转 */
+  color: rgba(255, 255, 255, 0.3); /* 设置水印颜色和透明度 */
+  font-size: 5vw; /* 使用视口单位设置字体大小 */
+  pointer-events: none; /* 防止水印干扰其他元素的交互 */
+  z-index: 1000; /* 确保水印显示在其他内容之上 */
+  text-align: center; /* 文本居中显示 */
+  line-height: 1.5; /* 调整行高以更好地垂直居中文字 */
+  white-space: nowrap; /* 防止文本换行 */
+  /* 如果使用图片作为水印，可以添加如下背景样式 */
+  /* background: url('watermark.png') repeat; */
+  /* background-size: auto; */
+}
+
+/* 确保页面内容可以滚动，而水印固定在背景上 */
+.watermark-container > * {
+  position: relative; /* 相对于水印容器定位 */
+  z-index: 1; /* 确保内容显示在水印之上 */
+}
