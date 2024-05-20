@@ -6,36 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>个人简历网站</title>
   <style>
-    .watermark-container {
-    position: relative; /* 使伪元素能够相对于此容器定位 */
-    width: 100%; /* 容器宽度占满全屏 */
-    height: 100vh; /* 容器高度等于视口高度 */
-    overflow: auto; /* 允许内容滚动 */
-}
-
-.watermark-container:before {
-    content: "网站内容仅供展示，请勿盗用！！"; /* 水印内容 */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%; /* 水印宽度占满全屏 */
-    height: 100%; /* 水印高度占满全屏 */
-    color: rgba(255, 255, 255, 0.3); /* 设置水印颜色和透明度 */
-    font-size: 5vw; /* 使用视口单位设置字体大小，使其在不同设备上都能适应 */
-    transform: translate(-50%, -50%) rotate(-25deg); /* 定位到中心并旋转 */
-    pointer-events: none; /* 防止水印干扰其他元素的交互 */
-    z-index: 1000; /* 确保水印显示在其他内容之上 */
-    background-repeat: repeat; /* 如果使用图片水印，确保图片重复铺满 */
-    /* 如果使用图片作为水印，可以添加如下背景样式 */
-    /* background-image: url('watermark.png'); */
-    /* background-size: auto; */
-}
-
-/* 确保页面内容可以滚动，而水印固定在背景上 */
-.watermark-container > * {
-    position: relative; /* 相对于水印容器定位 */
-    z-index: 1; /* 确保内容显示在水印之上 */
-}
+    
   </style>
 </head>
 
@@ -113,15 +84,15 @@
       }
     }, 100); // 每隔100毫秒执行一次
   </script>
-  <!-- 添加水印文本的容器 -->
-  <div class="watermark-container">
+  
 
-  <!-- 页面内容 -->
-  <div style="position: relative; z-index: 1;background-color: #f1f1f1; text-align: center; padding: 40px">
-    <img src="https://avatars.githubusercontent.com/u/54188602?s=400&u=ede8d685efdf08befcd86c61d37abfa54cea8cbe&v=4" alt="Pulpit rock" width="60" height="65">
-    <h1>个人简历网站</h1>
-  </div>
-  <article style="
+    <!-- 页面内容 -->
+    <div style="position: relative; z-index: 1;background-color: #f1f1f1; text-align: center; padding: 40px">
+      <img src="https://avatars.githubusercontent.com/u/54188602?s=400&u=ede8d685efdf08befcd86c61d37abfa54cea8cbe&v=4"
+        alt="Pulpit rock" width="60" height="65">
+      <h1>个人简历网站</h1>
+    </div>
+    <article style="
           max-width: 760px; 
           margin: 10px auto;
           padding: 15px;
@@ -130,35 +101,39 @@
           line-height: 1.7;
           text-size-adjust: 100%;
         ">
-    <p>个人介绍</p>
-    <p>毕业于广东理工学院软件技术专业</p>
-    <p>主修课程：<br>计算机应用基础、网页设计、Java程序设计、JSP程序设计、软件工程与UML、软件测试基础、数据库原理与SQL Server、软件文档写作、Photoshop</p>
-    <p>辅修课程：<br>Linux运维</p>
-    <p>在校经历：<br><a target="_blank" rel="nofollow noopener noreferrer" href="./School experience/School experience1.html">宿舍楼网络维护（兼职）</a></p>
-    <p><a target="_blank" rel="nofollow noopener noreferrer" href="login-html/login1.html">网站注册、登录页项目预览页项目预览 </a></p>
-    <p><a target="_blank" rel="nofollow noopener noreferrer" href="login-html/registered/registered.html">网站注册页项目预览页项目预览 </a></p>
-    <p><a target="_blank" rel="nofollow noopener noreferrer" href="login-html/login2.html">后台登录页页项目预览 </a></p>
-    <p>工作经历：<br><a target="_blank" rel="nofollow noopener noreferrer" href="Work experience/Work experience1.html">2020.9~2022.1
-        信宜市高尚电脑3号摊（电脑组装与维修助理）</a><br><a target="_blank" rel="nofollow noopener noreferrer"
-        href="Work experience/Work experience2.html">2022.3~2023.11 信宜市真实电脑店（电脑组装与维修助理）</a></p>
-  </article>
-  <footer style="
+      <p>个人介绍</p>
+      <p>毕业于广东理工学院软件技术专业</p>
+      <p>主修课程：<br>计算机应用基础、网页设计、Java程序设计、JSP程序设计、软件工程与UML、软件测试基础、数据库原理与SQL Server、软件文档写作、Photoshop</p>
+      <p>辅修课程：<br>Linux运维</p>
+      <p>在校经历：<br><a target="_blank" rel="nofollow noopener noreferrer"
+          href="./School experience/School experience1.html">宿舍楼网络维护（兼职）</a></p>
+      <p><a target="_blank" rel="nofollow noopener noreferrer" href="login-html/login1.html">网站注册、登录页项目预览页项目预览 </a></p>
+      <p><a target="_blank" rel="nofollow noopener noreferrer"
+          href="login-html/registered/registered.html">网站注册页项目预览页项目预览 </a></p>
+      <p><a target="_blank" rel="nofollow noopener noreferrer" href="login-html/login2.html">后台登录页页项目预览 </a></p>
+      <p>工作经历：<br><a target="_blank" rel="nofollow noopener noreferrer"
+          href="Work experience/Work experience1.html">2020.9~2022.1
+          信宜市高尚电脑3号摊（电脑组装与维修助理）</a><br><a target="_blank" rel="nofollow noopener noreferrer"
+          href="Work experience/Work experience2.html">2022.3~2023.11 信宜市真实电脑店（电脑组装与维修助理）</a></p>
+    </article>
+    <footer style="
             margin-top: 60px;
             background-color: #f1f1f1;
             text-align: center;
             padding: 40px;
             font-size: 15px;
           ">
-    <p style="color: #666"><a target="_blank" rel="nofollow noopener noreferrer" href=“github.com/SCP1783”> Copyright © SCP1783 </a></p>
-    <!--版权-->
-    <!--<a style="color: #666" href="备案号查询网址" target="_blank" rel="noopener noreferrer">备案号</a>
+      <p style="color: #666"><a target="_blank" rel="nofollow noopener noreferrer" href=“github.com/SCP1783”> Copyright
+          © SCP1783 </a></p>
+      <!--版权-->
+      <!--<a style="color: #666" href="备案号查询网址" target="_blank" rel="noopener noreferrer">备案号</a>
     <p></p>-->
-    <!--备案号-->
-    <!--<a style="color: #666" href="备案号查询网址" target="_blank" rel="nofollow noopener noreferrer"><img
+      <!--备案号-->
+      <!--<a style="color: #666" href="备案号查询网址" target="_blank" rel="nofollow noopener noreferrer"><img
         src="https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png" alt="anbei"
         style="width: 15px; height: 15px">备案号</a>-->
-    <!--备案号-->
-  </footer>
+      <!--备案号-->
+    </footer>
 </body>
 
 </html>
