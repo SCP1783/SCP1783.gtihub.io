@@ -238,6 +238,15 @@ section .color:nth-child(3) {
 
 /*footer*/
 
+footer {
+    position: fixed;/* 固定在视口底部 */
+    bottom: 0;/* 距离视口底部0距离 */
+    width: 100%;/* 宽度为100%，占满整个视口 */
+    text-align: center; /* 文本居中显示 */
+    /*background-color: #333;*//* 设置背景色为深灰色 */
+    /*color: white;*/ /* 设置文本颜色为白色 */
+    padding: 10px 0;/* 设置上下内边距为10px，左右内边距为0 */
+}
 
 footer p a {
   color: #666;
