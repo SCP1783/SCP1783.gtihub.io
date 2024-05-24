@@ -8,20 +8,20 @@
   <meta http-equiv="description" content="this is my page">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+  <link rel="stylesheet" type="text/css" href="../css/body.css">
 
   <style type="text/css">
-    body {
+    /*body {
       background-image: url(../img/login.jpg);
       background-repeat: no-repeat;
       /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
-      background-attachment: fixed;
+     /* background-attachment: fixed;
       /*此条属性必须设置否则可能无效*/
       /* 让背景图基于容器大小伸缩 */
-      background-size: cover;
+     /* background-size: cover;
       /* 设置背景颜色，背景图加载过程中会显示背景色 */
-      background-color: #CCCCCC;
-    }
+     /* background-color: #CCCCCC;
+    }*/
 
     /* 响应式布局 */
     @media screen and (max-width: 768px) {
@@ -61,7 +61,8 @@
       font-family: 微软雅黑;
       font-size: 40px;
       text-align: center;
-      margin-top: 200px;
+      margin-top: -100px;
+      z-index: 100;
     }
 
     form {
@@ -70,6 +71,7 @@
       margin: 40px auto auto auto;
       /*上右下左*/
       font-size: 25px;
+      
     }
 
     input {
@@ -88,8 +90,14 @@
       margin-left: 6px;
     }
 
+    .overlay {
+        position: absolute;
+        top: 0px; /* 你可以根据需要调整这些值 */
+        left: 15px;
+        z-index: 100; /* 确保table在其他元素之上 */
+    }
 
-  </style>
+</style>
 </head>
 
 <script type="text/javascript">
@@ -171,9 +179,23 @@
 </script>
 
 <body>
+
+  <section>
+    <!-- 背景颜色 -->
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="box">
+      <!-- 背景圆 -->
+      <div class="circle" style="--x:0"></div>
+      <div class="circle" style="--x:1"></div>
+      <div class="circle" style="--x:2"></div>
+      <div class="circle" style="--x:3"></div>
+      <div class="circle" style="--x:4"></div>
+  
   <div id="user_reg">用户注册:</div>
   <form action="./servlet/RegisterServlet" method="post" name="form">
-    <table>
+    <table class="overlay">
       <tr>
         <td>请输入账号：</td>
         <td><input type="text" id="username" name="username" placeholder="只能用邮箱注册"
