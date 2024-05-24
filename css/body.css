@@ -175,7 +175,7 @@ footer {
   left: 0; /* 宽左侧的距离为0，确保footer元素左对齐视口。*/
   width: 100%; /* 宽度为100%，占满整个视口 */
   text-align: center; /* 文本居中显示 */
-  background-color: #f1f1f1; /* 设置背景色为深灰色 */
+ /* background-color: #f1f1f1;  设置背景色为深灰色 */
   /*color: white;*/ /* 设置文本颜色为白色 */
   padding: 10px 0; /* 设置上下内边距为10px，左右内边距为0 */
   font-size: 15px; /*文本的字体大小为15像素*/
